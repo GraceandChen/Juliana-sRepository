@@ -152,6 +152,96 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ATRS-WEEK3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/07/ATRS-WEEK3/">ATRS WEEK3</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/07/ATRS-WEEK3/" class="archive-article-date">
+  	<time datetime="2019-07-07T10:54:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ARTS-WEEK3"><a href="#ARTS-WEEK3" class="headerlink" title="ARTS WEEK3"></a>ARTS WEEK3</h1><ul>
+<li><h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2>给定两个数组，编写一个函数来计算它们的交集。</li>
+</ul>
+<p>示例 1:</p>
+<p>输入: nums1 = [1,2,2,1], nums2 = [2,2]<br>输出: [2]<br>示例 2:</p>
+<p>输入: nums1 = [4,9,5], nums2 = [9,4,9,8,4]<br>输出: [9,4]</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] intersection(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span>[] nums2) &#123;</span><br><span class="line">         HashSet&lt;Integer&gt; hashSet = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">		 <span class="keyword">for</span> (<span class="keyword">int</span> i : nums1) &#123;</span><br><span class="line">			 hashSet.add(i);</span><br><span class="line">		&#125;</span><br><span class="line">		 Set&lt;Integer&gt; arrayList = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">		 <span class="keyword">for</span> (<span class="keyword">int</span> i : nums2) &#123;</span><br><span class="line">			 <span class="keyword">if</span>(hashSet.contains(i))</span><br><span class="line">				 arrayList.add(i);</span><br><span class="line">		 &#125;</span><br><span class="line">		 <span class="keyword">int</span>[] ss = <span class="keyword">new</span> <span class="keyword">int</span>[arrayList.size()];</span><br><span class="line">		 <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">		 <span class="keyword">for</span> (Integer integer : arrayList) &#123;</span><br><span class="line">			 ss[i] = integer;</span><br><span class="line">             i++;</span><br><span class="line">		 &#125;</span><br><span class="line">		 <span class="keyword">return</span> ss;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个方法其实可以使用hashSet.retainAll()，这个方法的源码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">retainAll</span><span class="params">(Collection&lt;?&gt; c)</span></span>&#123;</span><br><span class="line">    <span class="keyword">boolean</span> modified = <span class="keyword">false</span>;</span><br><span class="line">    Iterator&lt;E&gt; e = iterator();</span><br><span class="line">    <span class="keyword">while</span> (e.hasNext())&#123;</span><br><span class="line">        <span class="keyword">if</span> (!c.contains(e.next()))&#123;</span><br><span class="line">            e.remove();</span><br><span class="line">            modified = <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> modified;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度为O(n)。</p>
+<ul>
+<li><h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2></li>
+</ul>
+<p>10 Interview Questions Every JavaScript Developer Should Know]: <a href="https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95" target="_blank" rel="noopener">https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95</a> “</p>
+<p>我看了一篇在medium上的文章-每个js开发者都应该知道的10个面试问题<br>我的理解不一定是正确的，理解错误说明我的英语水平还待提高：</p>
+<ol>
+<li>我们应该要关注3P “Person,Process,Product”，人，进度，产品。</li>
+<li>在面试的时候不用问一个基础的语法，因为这些都可以Google的到，应该问一些能展现面试者的编程经验的问题-“Ask about architecture and paradigms ”。</li>
+<li>关于js的两大特点，<br>（1）js是OOP的语言，也就是面向对象的语言。<br>（2）js是函数式编程-Functional programming</li>
+</ol>
+<ul>
+<li><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>这一周学习的技能其实也没啥，我就上了leetCode刷了题，<br>我学习的语言是java，在工作的过程中，我发现也要用到shell脚本，也要用到TCp/IP的协议字节码传递。</p>
+</li>
+<li><h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2><p>。。。</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/07/ATRS-WEEK3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-ARTS-Week-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
