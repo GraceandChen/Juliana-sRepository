@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/7 | Hexo</title>
+  <title>ATRS Week4 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/07/index.html">
+  <meta name="description" content="Algorithm  给定一个二进制矩阵 A，我们想先水平翻转图像，然后反转图像并返回结果。 水平翻转图片就是将图片的每一行都进行翻转，即逆序。例如，水平翻转 [1, 1, 0] 的结果是 [0, 1, 1]。 反转图片的意思是图片中的 0 全部被 1 替换， 1 全部被 0 替换。例如，反转 [0, 1, 1] 的结果是 [1, 0, 0]。 示例 1: 输入: [[1,1,0],[1,0,1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ATRS Week4">
+<meta property="og:url" content="http://yoursite.com/2019/07/09/ATRS-Week4/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Algorithm  给定一个二进制矩阵 A，我们想先水平翻转图像，然后反转图像并返回结果。 水平翻转图片就是将图片的每一行都进行翻转，即逆序。例如，水平翻转 [1, 1, 0] 的结果是 [0, 1, 1]。 反转图片的意思是图片中的 0 全部被 1 替换， 1 全部被 0 替换。例如，反转 [0, 1, 1] 的结果是 [1, 0, 0]。 示例 1: 输入: [[1,1,0],[1,0,1">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-09T09:34:28.576Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="ATRS Week4">
+<meta name="twitter:description" content="Algorithm  给定一个二进制矩阵 A，我们想先水平翻转图像，然后反转图像并返回结果。 水平翻转图片就是将图片的每一行都进行翻转，即逆序。例如，水平翻转 [1, 1, 0] 的结果是 [0, 1, 1]。 反转图片的意思是图片中的 0 全部被 1 替换， 1 全部被 0 替换。例如，反转 [0, 1, 1] 的结果是 [1, 0, 0]。 示例 1: 输入: [[1,1,0],[1,0,1">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,76 +154,202 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-ATRS-Week4" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      ATRS Week4
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/09/ATRS-Week4/" class="archive-article-date">
+
+        
+        <a href="/2019/07/09/ATRS-Week4/" class="archive-article-date">
   	<time datetime="2019-07-09T07:06:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-09</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/09/ATRS-Week4/">ATRS Week4</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2></li>
+</ul>
+<p>给定一个二进制矩阵 A，我们想先水平翻转图像，然后反转图像并返回结果。</p>
+<p>水平翻转图片就是将图片的每一行都进行翻转，即逆序。例如，水平翻转 [1, 1, 0] 的结果是 [0, 1, 1]。</p>
+<p>反转图片的意思是图片中的 0 全部被 1 替换， 1 全部被 0 替换。例如，反转 [0, 1, 1] 的结果是 [1, 0, 0]。</p>
+<p>示例 1:</p>
+<p>输入: [[1,1,0],[1,0,1],[0,0,0]]<br>输出: [[1,0,0],[0,1,0],[1,1,1]]<br>解释: 首先翻转每一行: [[0,1,1],[1,0,1],[0,0,0]]；<br>     然后反转图片: [[1,0,0],[0,1,0],[1,1,1]]</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[][] flipAndInvertImage(<span class="keyword">int</span>[][] A) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i&lt;A.length;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span>[] ints = A[i];</span><br><span class="line">            <span class="keyword">int</span> num = ints.length/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j&lt;num;j++)&#123;</span><br><span class="line">                <span class="keyword">int</span> revers = ints.length-j-<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">int</span> anInt = ints[j];</span><br><span class="line">                <span class="keyword">int</span> anInt1 = ints[revers];</span><br><span class="line">                ints[j] = anInt1;</span><br><span class="line">                ints[revers] = anInt;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j&lt;ints.length;j++)&#123;</span><br><span class="line">                <span class="keyword">int</span> i1 = (ints[j] + <span class="number">1</span>) %<span class="number">2</span>;</span><br><span class="line">                ints[j] = i1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> A;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<p>这道题的解法用了二分法:<br>一个数组遍历初始到中间的元素，取的是length/2,假如共有6个元素，取0-3，与4-6的元素反转，假如只有7个元素，取0-3，和4-7的元素反转，正好中间的元素不用改变。<br>取得反转后的数组，再对该数组的元素取反，如元素为0取反变成1，元素为1取反变成0.这里我用了(num+1)%2可以取反。刚开始我编写的时候用的是（num+1）/2。但是因为0+1 = 1 1/2 = 0 ，结果并没有变。所以所以应该用取余的方法。</p>
+<ul>
+<li><h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2>今天还是看了medium.com 上的一篇关于js的回调函数的引导文章——What the hack is a callback?回调函数是什么。</li>
+</ul>
+<p>作者深入浅出的介绍了js的回调函数的作用。对于学js的新手小白们，这篇文章真的通俗易懂，入门简单。</p>
+<p>首先作者的文章分析如下：<br>（1） 强调了js是函数式编程。js的每一个对象Object其实就是函数，js is Functional programming,这在我的上一篇文章讲到，javascript是函数式编程，基本的单位就是function.<br> (2) 如果没有callback就无法保证调用顺序 作者举了几个例子说明了js的函数的调用顺序并不是按照代码中的编写顺序进行的。例如在第一个函数里调用了一个延时函数，延时500毫秒，函数的内容式打印1到控制带，第二个函数里直接打印2到控制台。第一个函数是模拟了发送请求等待回复的过程。结果是控制台打印了2，然后才打印了1.回调函数则是在一个函数执行完后才调用的函数，这个函数的作用现在已经十分清楚了，就是为了弥补js的不按调用顺序调用函数的不足。能够确保在收到回复后才执行函数。<br> （3）callback函数弥补了在调用请求后才执行下一个程序的需求缺陷。<br> callback函数实现方式有两种：<br> 一是作为匿名函数成为参数<br> 二是在外部定义函数，引用函数名作为参数</p>
+<p> 具体的文章地址如下：<br> <a href="https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced" title="JavaScript: What the heck is a Callback?" target="_blank" rel="noopener">JavaScript: What the heck is a Callback?</a><br> [需要VPN访问]</p>
+<ul>
+<li><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>这周工作的内容基本上不饱和的，所以有一些闲暇的时间给我看技术方面的知识。<br>通报一下我这周的技术学习：</p>
+<p> 在我们项目刚开始的时候，为了能够不经常的向数据库取数据，我在后台服务里自己用集合保存数据的方式实现缓存数据的功能。写完了发现如果需要维护的话底层的代码需要自己写，而且如果出现了计算错误，那么数据不同步的问题就来了。</p>
+<p> 我这种编程小白真的没有说可以一次写出有效的代码，所以写底层的缓存数据，以及后来维护修改，都不方便。后来用了redis。引入了spring集成redis的依赖，在配置文件里配置服务端口，然后在网上搜了一些RedisService的实现类，作为底层的实现，然后重写实现服务接口即可。</p>
+<p> 后来，又发现了redis的另一个用处，那就是可以用来存放除了数据库之外的数据啊。比如保存当前的告警流水号。由于流水号是递增的，所以若想获得新的流水号，须在原来的流水号的基础上加一。<br> redis其实可以保存任意的对象。</p>
+</li>
+<li><h2 id="Shares"><a href="#Shares" class="headerlink" title="Shares"></a>Shares</h2><p> 既然说到了Redis,我也用了，那就来回顾一下Redis的知识。</p>
+<ul>
+<li><p>Redis 是提供缓存服务的非关系型数据库，它保存的数据是key-value类型的，可以提供不同服务共享缓存信息。</p>
+<p>Redis 可以储存字符串、对象。hash表，列表。</p>
+<p>一般我使用都是使用hash表。</p>
+<p>hashOperations：</p>
+<ul>
+<li>hashOperations.put()</li>
+<li>hashOperations.putAll()</li>
+<li>hashOperations.get()</li>
+<li>hashOperations.delete()</li>
+<li>hashOperations.entries()<br>以上方法包含了添加、添加所有、获取、删除、获取所有的功能。<br>这些方法都在redisTemplate<br>在使用的时候声明一个泛型抽象类封装不同的方法，方法中调用以上功能，具体的实现给不同的数据表类型来实现。</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>当然你还需要配置端口号，以及配置RedisConfig的配置，实现@EnableCaching，@Configuration，该配置类应该继承CachingConfigurerSupport类。配置这个类的目的是将redis作为默认的缓存工具<br>其中需要配置<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.connectionFactory</span><br><span class="line"><span class="number">2</span>.JsonSerializer</span><br><span class="line"><span class="number">3</span> 对hash类型的数据操作 radisTemplate.opsForHash</span><br><span class="line"><span class="number">4</span>.对字符串类型的数据操作 radisTemplate.opsForValue</span><br><span class="line"><span class="number">5</span>.对链表类型的数据操作 radisTemplate.opsForList</span><br><span class="line"><span class="number">6</span>.对无序集合的数据操作 radisTemplate.oposForSet</span><br><span class="line"><span class="number">7</span>.对有序类型的数据操作 radisTemplate.opsForZSet</span><br></pre></td></tr></table></figure>
 
+
+</li>
+</ol>
+</li>
+</ul>
+<p>  这就是我的使用过程。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/09/ATRS-Week4/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/07/ATRS-WEEK3/" class="archive-article-date">
-  	<time datetime="2019-07-07T10:54:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-07</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/07/ATRS-WEEK3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ATRS WEEK3</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/07/ATRS-WEEK3/">ATRS WEEK3</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -242,8 +372,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
